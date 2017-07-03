@@ -1,57 +1,6 @@
-Thu Jun 29 20:00:27 CDT 2017
+Sun Jul  2 21:21:26 CDT 2017
 
 WIP
 ===
 
-* test UI integration
-    * enhance coffeescript console as an admin tool
-    * implement bitwrap-ui
-
-BACKLOG:
-========
-
-* incorporate PNML 'capacity' field
-  * Modify pgsql data types -- composite state & vector types
-    * to be composed of a domain of token specific to each place location.
-
-* finish lambda implementation ./bitwrap_psql/aws_lambda.py
-  * bitwrap-lambda # python + psql
-
-* test for beta release
-  * release to bitwrap.github.io
-    * deploy on aws_lambda + Api Gateway
-
-* Docker build - update to use postgres
-  * add sample docker config w/ link between db and API
-
-ICEBOX:
-=======
-
-* support authentiaction w/ AWS gateway api + cognito
-  * could we drive this entirely at the DB level?
-    * ? add a permission assert to before trigger
-
-* Contracts 
-  * support 'role' functionality via 'control' vector
-    * inhibitors provide basic boolean operations 
-  * allow cross-net interaction between elementary nets
-    * existing: Event(oid)
-    * new: Event(oid, sender=<oid>)
-
-* Examples and Demos
-  * use microcosm multi-machine
-    * demo roles / BITS / (? control structures ?)
-  * 'octotron' model for 'Ultimate Tic-Tac-Toe'
-  * build a new 'torstor' DEMO
-    * the ideal javascript-disabled site
-      * demo project using only html image maps and SVG images
-      * provide anonymity combined with open-ness
-
-* Next Version or Fork ?
-  * python3
-    * consider porting use newer async libs
-    * -or- keep twisted & re-code to drop dependance on cyclone
-      * some SSL dependencies from cyclone don't build on rasbian
-  * OpenResty/Lua
-    * https://github.com/openresty/docker-openresty
-    * https://github.com/shmul/lightningmdb
+Testing integration w/ bitwrap-io

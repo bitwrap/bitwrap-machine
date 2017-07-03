@@ -1,29 +1,18 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="bitwrap-io",
+    name="bitwrap-machine",
     version="0.2.0",
     author="Matthew York",
     author_email="myork@stackdump.com",
-    description="A blockchain-style python eventstore w/ LMDB or postgresql backend",
+    description="Petri-Net State Machines",
     license='MIT',
-    keywords='PNML petri-net eventstore state-machine',
-    packages=find_packages() + ['twisted.plugins'],
+    keywords='PNML petri-net state-machine bitwrap',
+    packages=find_packages(),
     include_package_data=True,
-    install_requires=['cyclone==1.1', 'service-identity==16.0.0', 'pg8000==1.10.6'],
+    install_requires=[],
     long_description="""
-# Bitwrap-io
-
-A blockchain-style eventstore
-
-### Reference
-
-Read Martin Fowler's description of [Event Sourcing](http://martinfowler.com/eaaDev/EventSourcing.html).
-
-Watch an event sourcing video from [Greg Young](https://www.youtube.com/watch?v=8JKjvY4etTY).
-
-Learn more about our deterministic approach to Blockchains at our blog [blahchain.com](http://www.blahchain.com).
-
+Bitwrap-machine provides a means of loading PNML documents as P/T net state machines.
 """,
     url="http://getbitwrap.com",
     classifiers=[
