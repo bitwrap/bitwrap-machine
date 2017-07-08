@@ -1,0 +1,21 @@
+language: python
+python:
+  - '2.7'
+env:
+  - BITWRAP_DATASTORE=pgsql
+before_script:
+    - psql -c "ALTER USER postgres WITH password 'bitwrap'" -U postgres
+script:
+  - PYTHONPATH=./ trial bitwrap_psql.test.test_schema_migration
+  - PYTHONPATH=./ trial bitwrap_io.test.test_rpc_api
+  - PYTHONPATH=./ trial bitwrap_io.test.test_eventstore
+deploy:
+  provider: pypi
+  user: stackdump
+  password:
+    secure: BV9jCdetVPayU6+c8zQdch1EWqvvZOqvDkvvqMPWU52TocD1WW+phI0yYk4pEWYMwvwKmxzriR4g8it/juOZZO0usANPlpOtFsf4+kSssBuTGTdLKei4KCSMube8YX/ARGnSeIYSuc6TjQ4e+aj6ZC9pIX3IeP0SNiBsgVVXRJkh4EQYzh3KyNNJMpTAuIScVhWvrWsP3pLexol76v7meGFoWsTKHBC3u2HEteN8GG/hFKb8yqPlis9xlUms2ESBQFdJo8DR1AnH5me6g38RL1H/vijt9ssWF8XsFVn22RIepisDPunmZ2oVzCpXq2Aw6Shac2UYNGpT06gGSQbuBhLXlDlmE6K0vu61KMsRECZEDh3gehrVZGyWnlovQH1soH/fXW3QU8ezJby85oRJuvoiPcM0K705R7kK7ZzUmiDyJX4pSOlX9gRnhrkj/nQXB2k11nDA8mP0nQeUTjEfu7knJqo11GahEUsMwEIRlY5dsQ6O5LrWNQrTM7ufUt64/7FAXgWKzLeSyTiRUWpi6XzpbK3TV7QRoXsy99+ARRaUZZfTIyzq27S64mbOr6zZY04GhunMG+8uekXc2rEPkBxNnP+X2jcQ4ozIwKYaY+wFWAlT11AClLlLZpbLVjTJL8nRLrs102FTRwpz7S9YZADoql5j14oiIbPefe3Qwyo=
+  skip_upload_docs: true
+  on:
+    tags: true
+addons:
+  postgresql: "9.4"

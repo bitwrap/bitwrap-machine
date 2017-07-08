@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><pnml>
+    <net id="Net-One" type="P/T net">
+        <token id="Default" enabled="true" red="0" green="0" blue="0"/>
+        <place id="ACCOUNT">
+            <graphics>
+                <position x="660.0" y="480.0"/>
+            </graphics>
+            <name>
+                <value>ACCOUNT</value>
+                <graphics>
+                    <offset x="93.0" y="25.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="BANK">
+            <graphics>
+                <position x="450.0" y="225.0"/>
+            </graphics>
+            <name>
+                <value>BANK</value>
+                <graphics>
+                    <offset x="-4.0" y="2.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="role_banker">
+            <graphics>
+                <position x="720.0" y="315.0"/>
+            </graphics>
+            <name>
+                <value>role_banker</value>
+                <graphics>
+                    <offset x="95.0" y="47.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="role_investor">
+            <graphics>
+                <position x="255.0" y="555.0"/>
+            </graphics>
+            <name>
+                <value>role_investor</value>
+                <graphics>
+                    <offset x="121.0" y="47.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="role_sender">
+            <graphics>
+                <position x="105.0" y="225.0"/>
+            </graphics>
+            <name>
+                <value>role_sender</value>
+                <graphics>
+                    <offset x="6.0" y="-8.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="role_system">
+            <graphics>
+                <position x="465.0" y="75.0"/>
+            </graphics>
+            <name>
+                <value>role_system</value>
+                <graphics>
+                    <offset x="53.0" y="-11.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="role_target">
+            <graphics>
+                <position x="785.0" y="180.0"/>
+            </graphics>
+            <name>
+                <value>role_target</value>
+                <graphics>
+                    <offset x="114.0" y="12.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="role_trader">
+            <graphics>
+                <position x="300.0" y="195.0"/>
+            </graphics>
+            <name>
+                <value>role_trader</value>
+                <graphics>
+                    <offset x="-17.0" y="7.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="WALLET">
+            <graphics>
+                <position x="210.0" y="495.0"/>
+            </graphics>
+            <name>
+                <value>WALLET</value>
+                <graphics>
+                    <offset x="-14.0" y="34.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <transition id="buy">
+            <graphics>
+                <position x="435.0" y="315.0"/>
+            </graphics>
+            <name>
+                <value>buy</value>
+                <graphics>
+                    <offset x="50.0" y="11.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="create">
+            <graphics>
+                <position x="390.0" y="135.0"/>
+            </graphics>
+            <name>
+                <value>create</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="deposit">
+            <graphics>
+                <position x="525.0" y="240.0"/>
+            </graphics>
+            <name>
+                <value>deposit</value>
+                <graphics>
+                    <offset x="76.0" y="21.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="destroy">
+            <graphics>
+                <position x="525.0" y="135.0"/>
+            </graphics>
+            <name>
+                <value>destroy</value>
+                <graphics>
+                    <offset x="77.0" y="34.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="divest">
+            <graphics>
+                <position x="330.0" y="450.0"/>
+            </graphics>
+            <name>
+                <value>divest</value>
+                <graphics>
+                    <offset x="64.0" y="43.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="invest">
+            <graphics>
+                <position x="600.0" y="525.0"/>
+            </graphics>
+            <name>
+                <value>invest</value>
+                <graphics>
+                    <offset x="62.0" y="47.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="sell">
+            <graphics>
+                <position x="255.0" y="405.0"/>
+            </graphics>
+            <name>
+                <value>sell</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="withdraw">
+            <graphics>
+                <position x="570.0" y="435.0"/>
+            </graphics>
+            <name>
+                <value>withdraw</value>
+                <graphics>
+                    <offset x="5.0" y="16.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <arc id="ACCOUNT to deposit" source="ACCOUNT" target="deposit">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="664" y="479" curvePoint="false"/>
+            <arcpath id="001" x="537" y="267" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="ACCOUNT to divest" source="ACCOUNT" target="divest">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="657" y="490" curvePoint="false"/>
+            <arcpath id="001" x="346" y="467" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="BANK to destroy" source="BANK" target="destroy">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="471" y="225" curvePoint="false"/>
+            <arcpath id="001" x="531" y="152" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="BANK to sell" source="BANK" target="sell">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="450" y="247" curvePoint="false"/>
+            <arcpath id="001" x="272" y="412" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="BANK to withdraw" source="BANK" target="withdraw">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="469" y="249" curvePoint="false"/>
+            <arcpath id="001" x="582" y="432" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="buy to BANK" source="buy" target="BANK">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="447" y="312" curvePoint="false"/>
+            <arcpath id="001" x="459" y="251" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="create to BANK" source="create" target="BANK">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="406" y="152" curvePoint="false"/>
+            <arcpath id="001" x="453" y="224" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="deposit to BANK" source="deposit" target="BANK">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="532" y="247" curvePoint="false"/>
+            <arcpath id="001" x="476" y="239" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="divest to WALLET" source="divest" target="WALLET">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="337" y="457" curvePoint="false"/>
+            <arcpath id="001" x="235" y="501" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="invest to ACCOUNT" source="invest" target="ACCOUNT">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="616" y="537" curvePoint="false"/>
+            <arcpath id="001" x="660" y="501" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="role_banker to deposit" source="role_banker" target="deposit">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="718" y="321" curvePoint="false"/>
+            <arcpath id="001" x="541" y="252" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="role_banker to withdraw" source="role_banker" target="withdraw">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="720" y="336" curvePoint="false"/>
+            <arcpath id="001" x="587" y="446" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="role_investor to divest" source="role_investor" target="divest">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="275" y="554" curvePoint="false"/>
+            <arcpath id="001" x="336" y="467" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="role_investor to invest" source="role_investor" target="invest">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="281" y="566" curvePoint="false"/>
+            <arcpath id="001" x="606" y="545" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="role_sender to buy" source="role_sender" target="buy">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="131" y="241" curvePoint="false"/>
+            <arcpath id="001" x="441" y="328" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="role_sender to deposit" source="role_sender" target="deposit">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="131" y="237" curvePoint="false"/>
+            <arcpath id="001" x="531" y="257" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="role_sender to invest" source="role_sender" target="invest">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="129" y="244" curvePoint="false"/>
+            <arcpath id="001" x="607" y="531" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="role_system to create" source="role_system" target="create">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="465" y="96" curvePoint="false"/>
+            <arcpath id="001" x="407" y="142" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="role_system to destroy" source="role_system" target="destroy">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="487" y="97" curvePoint="false"/>
+            <arcpath id="001" x="532" y="142" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="role_target to divest" source="role_target" target="divest">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="784" y="199" curvePoint="false"/>
+            <arcpath id="001" x="347" y="457" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="role_target to sell" source="role_target" target="sell">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="783" y="198" curvePoint="false"/>
+            <arcpath id="001" x="271" y="422" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="role_target to withdraw" source="role_target" target="withdraw">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="787" y="203" curvePoint="false"/>
+            <arcpath id="001" x="587" y="439" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="role_trader to buy" source="role_trader" target="buy">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="323" y="216" curvePoint="false"/>
+            <arcpath id="001" x="442" y="321" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="role_trader to sell" source="role_trader" target="sell">
+            <graphics/>
+            <inscription>
+                <value/>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value/>
+            </tagged>
+            <arcpath id="000" x="308" y="221" curvePoint="false"/>
+            <arcpath id="001" x="267" y="402" curvePoint="false"/>
+            <type value="inhibitor"/>
+        </arc>
+        <arc id="sell to WALLET" source="sell" target="WALLET">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="267" y="432" curvePoint="false"/>
+            <arcpath id="001" x="229" y="494" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="WALLET to buy" source="WALLET" target="buy">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="233" y="497" curvePoint="false"/>
+            <arcpath id="001" x="441" y="335" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="WALLET to invest" source="WALLET" target="invest">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="236" y="508" curvePoint="false"/>
+            <arcpath id="001" x="606" y="538" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="withdraw to ACCOUNT" source="withdraw" target="ACCOUNT">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="586" y="453" curvePoint="false"/>
+            <arcpath id="001" x="658" y="485" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+    </net>
+</pnml>
