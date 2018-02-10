@@ -277,4 +277,4 @@ def parse_pnml_file(filename):
 if __name__ == "__main__":
 
     for pnet in parse_pnml_file(sys.argv[1]):
-        print pnet
+        print(pnet)
