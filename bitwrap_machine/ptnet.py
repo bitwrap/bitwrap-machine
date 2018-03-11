@@ -48,12 +48,12 @@ class PTNet(object):
         """ return an empty state-vector """
         return [0] * len(self.places)
 
-    def inital_vector(self):
-        """ return inital state-vector """
+    def initial_vector(self):
+        """ return initial state-vector """
         vector = self.empty_vector()
 
         for _, place in self.places.items():
-            vector[place['offset']] = place['inital']
+            vector[place['offset']] = place['initial']
 
         return vector
 
@@ -61,6 +61,6 @@ class PTNet(object):
         """ open p/t-net """
 
         return {
-            'state': self.inital_vector(),
+            'state': self.initial_vector(),
             'transitions': self.transitions
         }

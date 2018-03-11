@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="bitwrap-machine",
-    version="0.2.0",
+    version="0.3.0",
     author="Matthew York",
     author_email="myork@stackdump.com",
     description="Petri-Net State Machines",
@@ -16,7 +16,7 @@ Bitwrap-machine provides a means of loading PNML documents as P/T net state mach
 """,
     url="http://getbitwrap.com",
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         "Topic :: Database :: Database Engines/Servers",
         "License :: OSI Approved :: MIT License"
     ],

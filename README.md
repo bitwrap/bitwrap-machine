@@ -12,7 +12,7 @@ A Bitwrap machine can be explained as follows:
 
     1. It declares a single 'state-vector' of size 'n'
        * the machine is said to have 'n' places
-       * each place(n) has a pre-defined inital value.
+       * each place(n) has a pre-defined initial value.
     2. 'transitions' are defined as a set of delta vectors
        * of size 'n' 
        * containing positive or negative integers.

@@ -32,7 +32,7 @@ def places(net):
             _places[place] = {
                 'offset': offset,
                 'position': net.places[place].position,
-                'inital': net.places[place].marking
+                'initial': net.places[place].marking
             }
 
             offset += 1
